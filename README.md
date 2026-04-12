@@ -8,11 +8,13 @@ Recent advancements in audio-video joint generation models have demonstrated imp
 
 ---
 
+<!--
 ## 📊 Data Pipeline
 
 ![Data Pipeline](assets/figure2_small.png)
 
 ---
+-->
 
 ## 📥 Dataset
 
