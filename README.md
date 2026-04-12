@@ -14,12 +14,6 @@ Recent advancements in audio-video joint generation models have demonstrated imp
 
 ---
 
-## 📈 Benchmark distribution
-
-![Benchmark distribution](assets/bench_distribution.png)
-
----
-
 ## 📥 Dataset
 
 | Dataset | Hugging Face |
@@ -27,6 +21,12 @@ Recent advancements in audio-video joint generation models have demonstrated imp
 | `omnihuman_dataset` | [**Hugging Face dataset page**](https://huggingface.co/datasets/YOUR_HF_ORG/omnihuman_dataset) |
 
 For download and usage, please follow the instructions on the Hugging Face dataset page.
+
+---
+
+## 📈 Benchmark distribution
+
+![Benchmark distribution](assets/bench_distribution.png)
 
 ---
 
