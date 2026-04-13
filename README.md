@@ -20,7 +20,7 @@ Recent advancements in audio-video joint generation models have demonstrated imp
 
 | Dataset | Hugging Face |
 |---|---|
-| `omnihuman_dataset` | [**Hugging Face dataset page**](https://huggingface.co/datasets/YOUR_HF_ORG/omnihuman_dataset) |
+| `omnihuman_dataset` | [**Hugging Face dataset page**](https://huggingface.co/datasets/julia_527/omnihuman_dataset) |
 
 For download and usage, please follow the instructions on the Hugging Face dataset page.
 
@@ -40,7 +40,7 @@ OHBench lives under `omnihuman/ohbench/`.
 
 | Assets | Hugging Face |
 |---|---|
-| `models/` + `ohbench_dir.tar` | [**Hugging Face model repo**](https://huggingface.co/YOUR_HF_ORG/omnihuman_benchmark) |
+| `models/` + `ohbench_dir.tar` | [**Hugging Face model repo**](https://huggingface.co/julia_527/omnihuman_benchmark) |
 
 After downloading, make sure you have the following **two assets under `omnihuman/ohbench/`**:
 
