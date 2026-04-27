@@ -84,26 +84,6 @@ git clone https://github.com/YOUR_ORG/omnihuman.git
 cd omnihuman
 ```
 
-**GPU:** install the [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html) if you use Docker with `--gpus all`; on the host, install a CUDA-capable driver.
-
-### Option 1: Docker (recommended)
-
-We provide a **pre-built image** with dependencies. Replace `YOUR_ORG/ohbench-omnihuman:latest` with your published name (or a local tag).
-
-```bash
-docker pull YOUR_ORG/ohbench-omnihuman:latest
-
-docker run -it --gpus all --network host --ipc host \
-  -v /path/to/omnihuman:/workspace \
-  --name ohbench \
-  YOUR_ORG/ohbench-omnihuman:latest \
-  bash
-```
-
-Inside the container, runs use `/workspace/ohbench` (your mounted clone, including `models/` and `ohbench_dir/`). See [Run](#run) below.
-
-### Option 2: Conda (host)
-
 Create a clean environment, install FFmpeg, then install PyTorch + runtime deps:
 
 ```bash
