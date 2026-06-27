@@ -1,4 +1,4 @@
-# VivaHuman: A Large-scale Dataset and Benchmark for Human-Centric Video Generation
+# OmniHuman: A Large-scale Dataset and Benchmark for Human-Centric Video Generation
 
 # OmniHuman
 
