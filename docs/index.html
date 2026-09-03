@@ -1,10 +1,11 @@
 
 <!DOCTYPE html>
-<html lang="zh-CN">
+
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>🔥 OmniHuman Dataset Demonstration</title>
-    <style>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="OmniHuman: A Large-scale Dataset and Benchmark for Human-Centric Video Generation." name="description"/>
+<title>OmniHuman | ECCV 2026</title>
+<style>
         body { font-family: sans-serif; margin: 0; background: #fff; }
         header { max-width: 1000px; margin: 60px auto; text-align: center; padding: 0 20px; }
         .section-header { max-width: 1000px; margin: 40px auto 10px; text-align: center; padding: 0 20px; }
@@ -51,281 +52,579 @@
             word-break: break-word;
         }
     </style>
-</head>
-<body>
-    <header>
-        <h1>🔥 OmniHuman Dataset Demonstration</h1>
-        <p>We construct OmniHuman, a large-scale, multi-scene audio-visual dataset. our dataset comprises <strong>1 million videos</strong> totaling <strong>1,800 hours</strong>, encompassing <strong>80,000 distinct identities</strong>. It encompasses a wide range of authentic shooting environments and diverse social scenarios, featuring both a vast collection of human-human interaction videos and selected cases of human-object interactions. All videos are of high quality and audio-video synchronized. To interact with this demo, please first click on any video once; notice that, <strong>whenever you move your mouse over a video, you will hear the audio corresponding to that specific video.</strong></p>
-    </header>
-    <div class="video-grid">
-        
-        <div class="video-card">
-            <video src="omnihuman_dataset/01ff94a90eeb1a26c70403564d3b803e-Scene-010.mp4" autoplay loop muted playsinline></video>
-        </div>
-        <div class="video-card">
-            <video src="omnihuman_dataset/05e1da3ee4b13c54a257c841c9447543-Scene-017.mp4" autoplay loop muted playsinline></video>
-        </div>
-        <div class="video-card">
-            <video src="omnihuman_dataset/05f092313239791b431f4f669e823784-Scene-014.mp4" autoplay loop muted playsinline></video>
-        </div>
-        <div class="video-card">
-            <video src="omnihuman_dataset/23f46e5ac70810045cf44469089d8703-Scene-035.mp4" autoplay loop muted playsinline></video>
-        </div>
-        <div class="video-card">
-            <video src="omnihuman_dataset/263996dc174ebefbd13bc097cd42ed00-Scene-049.mp4" autoplay loop muted playsinline></video>
-        </div>
-        <div class="video-card">
-            <video src="omnihuman_dataset/27348a2e3bbc42587622888228039020-Scene-027.mp4" autoplay loop muted playsinline></video>
-        </div>
-        <div class="video-card">
-            <video src="omnihuman_dataset/34b5607e97442faf91006f1f1e58a642-Scene-050.mp4" autoplay loop muted playsinline></video>
-        </div>
-        <div class="video-card">
-            <video src="omnihuman_dataset/40ef23d361ad9f749cccbcf1e8d35c5f-Scene-002.mp4" autoplay loop muted playsinline></video>
-        </div>
-        <div class="video-card">
-            <video src="omnihuman_dataset/599b1630b379d5635a14a9c7cb30ab36-Scene-007_subtitle_cropped.mp4" autoplay loop muted playsinline></video>
-        </div>
-        <div class="video-card">
-            <video src="omnihuman_dataset/5e1d39b3e206ed74ee05ab4577e9221c-Scene-031.mp4" autoplay loop muted playsinline></video>
-        </div>
-        <div class="video-card">
-            <video src="omnihuman_dataset/69ad997c47b5d87c4306a121f4b3946b-Scene-042_subtitle_cropped.mp4" autoplay loop muted playsinline></video>
-        </div>
-        <div class="video-card">
-            <video src="omnihuman_dataset/6ae858fdf2249248db898fee4636c205-Scene-003.mp4" autoplay loop muted playsinline></video>
-        </div>
-        <div class="video-card">
-            <video src="omnihuman_dataset/6f5f238770b5aa6a6e01d321d3d4c609-Scene-005_subtitle_cropped.mp4" autoplay loop muted playsinline></video>
-        </div>
-        <div class="video-card">
-            <video src="omnihuman_dataset/704079b27a30d116333f0f63dcc70f77-Scene-047.mp4" autoplay loop muted playsinline></video>
-        </div>
-        <div class="video-card">
-            <video src="omnihuman_dataset/7e18ce9cd7983ca20d85a1b54b29535a-Scene-043.mp4" autoplay loop muted playsinline></video>
-        </div>
-        <div class="video-card">
-            <video src="omnihuman_dataset/95352557bd1104d80b9fdfedfceec7b0-Scene-003.mp4" autoplay loop muted playsinline></video>
-        </div>
-        <div class="video-card">
-            <video src="omnihuman_dataset/968b7e6bb5e8a7863ae9546c58287fe6-Scene-013_subtitle_cropped.mp4" autoplay loop muted playsinline></video>
-        </div>
-        <div class="video-card">
-            <video src="omnihuman_dataset/b60577d2a6e8d2f5274f5dbe75d1887d-Scene-026.mp4" autoplay loop muted playsinline></video>
-        </div>
-        <div class="video-card">
-            <video src="omnihuman_dataset/c8319a64faecb4fddfbdef8de073d9dc-Scene-007.mp4" autoplay loop muted playsinline></video>
-        </div>
-        <div class="video-card">
-            <video src="omnihuman_dataset/e2f5329b49cd9cae014a09aa233cd6a8-Scene-064.mp4" autoplay loop muted playsinline></video>
-        </div>
-    </div>
+<style>
+        html { scroll-behavior: smooth; }
 
-    <div class="section-header">
-        <h2>🚀 OmniHuman Benchmark</h2>
-        <p>We establish OHBench, a comprehensive benchmark aligned with human perception for human-centric  multimodal video generation, enabling comprehensive diagnosis of model performance in real-world scenarios. The following section details the performance scores of different cases (<strong>all videos are generated by different models</strong>) across some evaluation metrics in OHBench.</p>
-    </div>
-    <div class="ohbench">
-        
-        <div class="ohbench-row">
-            <div class="ohbench-row-videos">
-                
-            <div class="video-card">
-                <video src="omnihuman_benchmark/BP/4a3d031a76ebc15e079048eedf6740cf-Scene-002.mp4" autoplay loop muted playsinline></video>
-            </div>
-            <div class="video-card">
-                <video src="omnihuman_benchmark/BP/b94d2fd87f0f92c9dc90969037c1831f-Scene-098.mp4" autoplay loop muted playsinline></video>
-            </div>
-            <div class="video-card">
-                <video src="omnihuman_benchmark/BP/c3b1c2a94e6c099246a99b04cfa9acd4-Scene-049.mp4" autoplay loop muted playsinline></video>
-            </div>
-            <div class="video-card">
-                <video src="omnihuman_benchmark/BP/cf15bfd37f70e059957071a3c6099750-Scene-076.mp4" autoplay loop muted playsinline></video>
-            </div>
-            </div>
-            <div class="ohbench-row-caption">🌄 The <strong>Background Plausibility (BP)</strong> metric ranges from 1 to 10, with higher values indicating superior quality. As illustrated from left to right, the respective scores from left to right are <strong>9, 1, 2, and 2.</strong></div>
-        </div>
-    
-        <div class="ohbench-row">
-            <div class="ohbench-row-videos">
-                
-            <div class="video-card">
-                <video src="omnihuman_benchmark/IC/0bd6ef084463ad7bbb4e9d3ceb003410-Scene-001.mp4" autoplay loop muted playsinline></video>
-            </div>
-            <div class="video-card">
-                <video src="omnihuman_benchmark/IC/2eade74a5e449a9b1e148aa8fb0f9ea8-Scene-042.mp4" autoplay loop muted playsinline></video>
-            </div>
-            <div class="video-card">
-                <video src="omnihuman_benchmark/IC/4569ccf18bf4c6384eb7a9152008ec93-Scene-022.mp4" autoplay loop muted playsinline></video>
-            </div>
-            <div class="video-card">
-                <video src="omnihuman_benchmark/IC/4774f005c662b822bba1babfd360d71b-Scene-305_subtitle_cropped_cropped.mp4" autoplay loop muted playsinline></video>
-            </div>
-            </div>
-            <div class="ohbench-row-caption">🆔 Regarding <strong>Identity Consistency (IC)</strong>, where both metrics range from 0 to 1, the scores for our metric and the VBench metric from left to right are: <strong>0.671 vs. 0.968, 0.513 vs. 0.970, 0.554 vs. 0.975, and 0.592 vs. 0.976</strong>, respectively. Notably, while these videos exhibit significantly different levels of identity fidelity to the naked eye, VBench's scores remain consistently high and nearly identical.</div>
-        </div>
-    
-        <div class="ohbench-row">
-            <div class="ohbench-row-videos">
-                
-            <div class="video-card">
-                <video src="omnihuman_benchmark/IC_double/4a3d031a76ebc15e079048eedf6740cf-Scene-002.mp4" autoplay loop muted playsinline></video>
-            </div>
-            <div class="video-card">
-                <video src="omnihuman_benchmark/IC_double/59442a2442ee8c5d92e3129b60dee990-Scene-025.mp4" autoplay loop muted playsinline></video>
-            </div>
-            <div class="video-card">
-                <video src="omnihuman_benchmark/IC_double/8001ded132e21b493035ed2c57586c29-Scene-012_subtitle_cropped.mp4" autoplay loop muted playsinline></video>
-            </div>
-            <div class="video-card">
-                <video src="omnihuman_benchmark/IC_double/91b10475ccb6639a05a81a60ce0e2fbc-Scene-038_subtitle_cropped.mp4" autoplay loop muted playsinline></video>
-            </div>
-            </div>
-            <div class="ohbench-row-caption">👥 For <strong>Dual-Person identity consistency (IC_double)</strong> ranges from 0 to 1, the scores from left to right are <strong>0.582, 0.892, 0.471, and 0.466</strong>, respectively.</div>
-        </div>
-    
-        <div class="ohbench-row">
-            <div class="ohbench-row-videos">
-                
-            <div class="video-card">
-                <video src="omnihuman_benchmark/IN/4dfbf128254d9e9b33b5b571379048bc-Scene-052_subtitle_cropped.mp4" autoplay loop muted playsinline></video>
-            </div>
-            <div class="video-card">
-                <video src="omnihuman_benchmark/IN/bee9e8add9cfc07f02ecb13d7f4eb2ae-Scene-032.mp4" autoplay loop muted playsinline></video>
-            </div>
-            <div class="video-card">
-                <video src="omnihuman_benchmark/IN/d9adf40156e4af0e4a14e28439cc5e41-Scene-034_subtitle_cropped.mp4" autoplay loop muted playsinline></video>
-            </div>
-            <div class="video-card">
-                <video src="omnihuman_benchmark/IN/e1d948a86c1390efefe3550ab5d1026b-Scene-004_subtitle_cropped.mp4" autoplay loop muted playsinline></video>
-            </div>
-            </div>
-            <div class="ohbench-row-caption">🤝 For <strong>interaction naturalness (IN)</strong> ranges from 1 to 10 (higher is better), the results from left to right are <strong>6, 2, 9, and 3</strong>, respectively.</div>
-        </div>
-    
-        <div class="ohbench-row">
-            <div class="ohbench-row-videos">
-                
-            <div class="video-card">
-                <video src="omnihuman_benchmark/LR/1b98daa995cb2c6e88089806ccaa1159-Scene-003.mp4" autoplay loop muted playsinline></video>
-            </div>
-            <div class="video-card">
-                <video src="omnihuman_benchmark/LR/73732b7f8f6a83e3586cd91b8d422810-Scene-119.mp4" autoplay loop muted playsinline></video>
-            </div>
-            <div class="video-card">
-                <video src="omnihuman_benchmark/LR/d16386c5659943c418943ceaffeca2b0-Scene-009.mp4" autoplay loop muted playsinline></video>
-            </div>
-            <div class="video-card">
-                <video src="omnihuman_benchmark/LR/f1d047c6a9b2d56f9e764864a037b299-Scene-005.mp4" autoplay loop muted playsinline></video>
-            </div>
-            </div>
-            <div class="ohbench-row-caption">🎧 For <strong>listener realism (LR)</strong> metric, which ranges from 1 to 10, the scores from left to right are <strong>1, 9, 1, and 1</strong>, respectively.</div>
-        </div>
-    
-        <div class="ohbench-row">
-            <div class="ohbench-row-videos">
-                
-            <div class="video-card">
-                <video src="omnihuman_benchmark/ES/2d0614ebab9b3995cd5d92721b549f66-Scene-009_subtitle_cropped.mp4" autoplay loop muted playsinline></video>
-            </div>
-            <div class="video-card">
-                <video src="omnihuman_benchmark/ES/85e1fff8f75018cd326c4ee87d997066-Scene-029.mp4" autoplay loop muted playsinline></video>
-            </div>
-            <div class="video-card">
-                <video src="omnihuman_benchmark/ES/972babaf689442a0994ae1fb5888696c-Scene-034.mp4" autoplay loop muted playsinline></video>
-            </div>
-            <div class="video-card">
-                <video src="omnihuman_benchmark/ES/cb0800b8288385ce41983031a5cf2fca-Scene-058.mp4" autoplay loop muted playsinline></video>
-            </div>
-            </div>
-            <div class="ohbench-row-caption">😊 For <strong>emotion similarity (ES)</strong> metric, which ranges from 1 to 10, the scores from left to right are <strong>2, 9, 3, and 5</strong>, respectively.</div>
-        </div>
-    
-        <div class="ohbench-row">
-            <div class="ohbench-row-videos">
-                
-            <div class="video-card">
-                <video src="omnihuman_benchmark/OC/01c7_mova.mp4" autoplay loop muted playsinline></video>
-            </div>
-            <div class="video-card">
-                <video src="omnihuman_benchmark/OC/071710c6e7f1ce8a90e26bac93973b7d-Scene-055.mp4" autoplay loop muted playsinline></video>
-            </div>
-            <div class="video-card">
-                <video src="omnihuman_benchmark/OC/0f8080c957463d7ae195c8c693b11a25-Scene-012.mp4" autoplay loop muted playsinline></video>
-            </div>
-            <div class="video-card">
-                <video src="omnihuman_benchmark/OC/f8f2d1d0f62f9f5d4fdb1dbbcd7301b2-Scene-024.mp4" autoplay loop muted playsinline></video>
-            </div>
-            </div>
-            <div class="ohbench-row-caption">📦 For <strong>object consistency (OC)</strong> metric, which ranges from 1 to 10, the scores from left to right are <strong>1, 2, 2, and 3</strong>, respectively.</div>
-        </div>
-    
-        <div class="ohbench-row">
-            <div class="ohbench-row-videos">
-                
-            <div class="video-card">
-                <video src="omnihuman_benchmark/AC/363ca4ae77497648e13d4933824291c8-Scene-032_cropped.mp4" autoplay loop muted playsinline></video>
-            </div>
-            <div class="video-card">
-                <video src="omnihuman_benchmark/AC/5c1ca3fa70ab8e47c3d58b43ac841553-Scene-068.mp4" autoplay loop muted playsinline></video>
-            </div>
-            <div class="video-card">
-                <video src="omnihuman_benchmark/AC/ba0da10666c2c0967b7598da8b6c1fe0-Scene-287.mp4" autoplay loop muted playsinline></video>
-            </div>
-            <div class="video-card">
-                <video src="omnihuman_benchmark/AC/c87172d0cb3574d392b5fd5c3a93cd42-Scene-027.mp4" autoplay loop muted playsinline></video>
-            </div>
-            </div>
-            <div class="ohbench-row-caption">🏷️ For <strong>attribute consistency (AC)</strong> metric, which ranges from 1 to 10, the scores from left to right are <strong>2, 3, 1, and 1</strong>, respectively.</div>
-        </div>
-    
-    </div>
-    <div class="section-header">
-        <h2>✨ Comparison of Results: Before vs. After FineTuning</h2>
-        <p>We finetuned LTX-2, the current SOTA model, using 200k samples from the OmniHuman Dataset. Notably, there is zero ID overlap between our benchmark and the training dataset. Our results show comprehensive improvements across all metrics, particularly in audio quality and identity preservation.</p>
-    </div>
-    <div class="extra-section">
-        
-        <div class="extra-row">
-            <div class="extra-row-videos">
-                
-            <div class="extra-video-card">
-                <video src="ltx_ft/identity/0_ltx_org.mp4" autoplay loop muted playsinline></video>
-            </div>
-            <div class="extra-video-card">
-                <video src="ltx_ft/identity/0_ltx_tune.mp4" autoplay loop muted playsinline></video>
-            </div>
-            <div class="extra-video-card">
-                <video src="ltx_ft/identity/1_ltx_org.mp4" autoplay loop muted playsinline></video>
-            </div>
-            <div class="extra-video-card">
-                <video src="ltx_ft/identity/1_ltx_tune.mp4" autoplay loop muted playsinline></video>
-            </div>
-            </div>
-            <div class="extra-row-caption">🆔 Above are two sets of video comparisons before and after finetuning. In each pair, the first video shows the original LTX-2 output, and the second displays the results after finetuning. It is evident that <strong>identity fidelity</strong> has been significantly improved.</div>
-        </div>
-    
-        <div class="extra-row">
-            <div class="extra-row-videos">
-                
-            <div class="extra-video-card">
-                <video src="ltx_ft/audio_quality/1_ltx_org.mp4" autoplay loop muted playsinline></video>
-            </div>
-            <div class="extra-video-card">
-                <video src="ltx_ft/audio_quality/1_ltx_tune.mp4" autoplay loop muted playsinline></video>
-            </div>
-            <div class="extra-video-card">
-                <video src="ltx_ft/audio_quality/2_ltx_org.mp4" autoplay loop muted playsinline></video>
-            </div>
-            <div class="extra-video-card">
-                <video src="ltx_ft/audio_quality/2_ltx_tune.mp4" autoplay loop muted playsinline></video>
-            </div>
-            </div>
-            <div class="extra-row-caption">🎧The video pairs above demonstrate the results before and after finetuning. In each pair, the first video shows the original LTX-2 output, followed by our finetuned version. Please listen closely to the <strong>audio</strong>: you will notice that the finetuned results exhibit significantly higher quality, with reduced background noise and a substantial boost in the realism and naturalness of the human voice.</div>
-        </div>
-    
-    </div>
-    <script>
+        body {
+            color: #202124;
+        }
+
+        .top-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.96);
+            border-bottom: 1px solid #ececec;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+
+        .top-nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .top-nav .brand {
+            font-weight: 700;
+            color: #222;
+            text-decoration: none;
+            letter-spacing: -0.2px;
+        }
+
+        .top-nav .nav-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 14px;
+        }
+
+        .top-nav .nav-links a {
+            color: #555;
+            text-decoration: none;
+        }
+
+        .top-nav .nav-links a:hover {
+            color: #2456a6;
+        }
+
+        .paper-header {
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 64px 20px 42px;
+            text-align: center;
+        }
+
+        .paper-header .venue {
+            margin-bottom: 12px;
+            color: #2456a6;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+        }
+
+        .paper-header h1 {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(48px, 7vw, 72px);
+            font-weight: 600;
+            line-height: 1.05;
+            letter-spacing: -1.6px;
+        }
+
+        .paper-header .paper-title {
+            max-width: 880px;
+            margin: 14px auto 0;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(22px, 3vw, 30px);
+            line-height: 1.28;
+            color: #333;
+        }
+
+        .paper-header .affiliations {
+            margin-top: 20px;
+            color: #666;
+            font-size: 15px;
+        }
+
+        .paper-actions {
+            margin-top: 24px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .paper-actions a {
+            display: inline-block;
+            padding: 8px 14px;
+            border: 1px solid #d7d7d7;
+            border-radius: 6px;
+            background: #fff;
+            color: #2456a6;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.2s, border-color 0.2s;
+        }
+
+        .paper-actions a:hover {
+            background: #f7f9fc;
+            border-color: #bfc7d5;
+        }
+
+        .paper-actions a.primary {
+            background: #2456a6;
+            border-color: #2456a6;
+            color: #fff;
+        }
+
+        .stats-strip {
+            max-width: 820px;
+            margin: 38px auto 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-top: 1px solid #e5e5e5;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .stat-item {
+            padding: 17px 12px;
+            text-align: center;
+        }
+
+        .stat-item + .stat-item {
+            border-left: 1px solid #e5e5e5;
+        }
+
+        .stat-item strong {
+            display: block;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        .stat-item span {
+            display: block;
+            margin-top: 3px;
+            color: #777;
+            font-size: 12px;
+        }
+
+        .overview-section {
+            max-width: 1000px;
+            margin: 0 auto 54px;
+            padding: 0 20px;
+        }
+
+        .overview-section .overview-box {
+            padding: 24px 26px;
+            border-top: 1px solid #e5e5e5;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .overview-section h2 {
+            margin: 0 0 10px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        .overview-section p {
+            margin: 0;
+            color: #444;
+            line-height: 1.75;
+        }
+
+        .overview-section .highlights {
+            margin: 15px 0 0;
+            padding-left: 20px;
+            color: #444;
+        }
+
+        .overview-section .highlights li {
+            margin: 6px 0;
+        }
+
+        .section-header {
+            scroll-margin-top: 70px;
+        }
+
+        .section-header h2 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        .section-header p {
+            color: #555;
+            line-height: 1.65;
+        }
+
+        .video-card,
+        .extra-video-card {
+            border-radius: 6px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+        }
+
+        .video-card:hover,
+        .extra-video-card:hover {
+            transform: scale(1.025);
+        }
+
+        .ohbench-row,
+        .extra-row {
+            padding-top: 4px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #efefef;
+        }
+
+        .ohbench-row:last-child,
+        .extra-row:last-child {
+            border-bottom: none;
+        }
+
+        .page-footer {
+            margin-top: 20px;
+            padding: 28px 20px 36px;
+            border-top: 1px solid #ececec;
+            text-align: center;
+            color: #888;
+            font-size: 13px;
+        }
+
+        .page-footer a {
+            color: #2456a6;
+            text-decoration: none;
+        }
+
+        @media (max-width: 760px) {
+            .top-nav-inner {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .paper-header {
+                padding-top: 44px;
+            }
+
+            .stats-strip {
+                grid-template-columns: 1fr;
+            }
+
+            .stat-item + .stat-item {
+                border-left: none;
+                border-top: 1px solid #e5e5e5;
+            }
+
+            .ohbench-row-videos,
+            .extra-row-videos {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+</style></head>
+<body><div class="top-nav">
+<div class="top-nav-inner">
+<a class="brand" href="#">OmniHuman</a>
+<div class="nav-links">
+<a href="#overview">Overview</a>
+<a href="#dataset-demo">Dataset</a>
+<a href="#ohbench-demo">OHBench</a>
+<a href="#finetuning-demo">Fine-tuning</a>
+<a href="https://github.com/julia-cherry/OmniHuman" rel="noopener" target="_blank">GitHub</a>
+</div>
+</div>
+</div>
+<header class="paper-header">
+<div class="venue">ECCV 2026</div>
+<h1>OmniHuman</h1>
+<div class="paper-title">A Large-scale Dataset and Benchmark for Human-Centric Video Generation</div>
+<div class="affiliations">Peking University  ·  Tencent WeChat</div>
+<div class="paper-actions">
+<a class="primary" href="https://arxiv.org/abs/2604.18326" rel="noopener" target="_blank">Paper</a>
+<a href="https://github.com/julia-cherry/OmniHuman" rel="noopener" target="_blank">Code</a>
+<a href="https://huggingface.co/datasets/julia527/omnihuman" rel="noopener" target="_blank">Dataset</a>
+<a href="https://huggingface.co/julia527/omnihuman_benchmark" rel="noopener" target="_blank">OHBench</a>
+</div>
+<div class="stats-strip">
+<div class="stat-item">
+<strong>1M</strong>
+<span>videos</span>
+</div>
+<div class="stat-item">
+<strong>1,800 h</strong>
+<span>audio-visual data</span>
+</div>
+<div class="stat-item">
+<strong>80K</strong>
+<span>identities</span>
+</div>
+</div>
+</header>
+<section class="overview-section" id="overview">
+<div class="overview-box">
+<h2>Overview</h2>
+<p>
+            OmniHuman is a large-scale, multi-scene audio-visual dataset designed for fine-grained human-centric video modeling.
+            It covers diverse real-world shooting environments and social scenarios, with rich human-human and human-object interactions.
+            Together with the dataset, we introduce OHBench to evaluate human-centric multimodal video generation beyond conventional global quality metrics.
+        </p>
+<ul class="highlights">
+<li>Large-scale and diverse human-centric audio-video data collected from real-world scenarios.</li>
+<li>Hierarchical annotations spanning global scenes, relational interactions, and individual attributes.</li>
+<li>OHBench provides a more comprehensive diagnosis of human-centric video generation quality.</li>
+</ul>
+</div>
+</section><div class="section-header" id="dataset-demo">
+<h2>🔥 OmniHuman Dataset Demonstration</h2>
+<p>
+        We construct OmniHuman, a large-scale, multi-scene audio-visual dataset. Our dataset comprises
+        <strong>1 million videos</strong> totaling <strong>1,800 hours</strong>, encompassing
+        <strong>80,000 distinct identities</strong>. It covers a wide range of authentic shooting environments
+        and diverse social scenarios, featuring both human-human and human-object interactions.
+        All videos are high quality and audio-video synchronized.
+        <strong>Hover over a video to hear its audio.</strong>
+</p>
+</div><div class="video-grid">
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_dataset/01ff94a90eeb1a26c70403564d3b803e-Scene-010.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_dataset/05e1da3ee4b13c54a257c841c9447543-Scene-017.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_dataset/05f092313239791b431f4f669e823784-Scene-014.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_dataset/23f46e5ac70810045cf44469089d8703-Scene-035.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_dataset/263996dc174ebefbd13bc097cd42ed00-Scene-049.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_dataset/27348a2e3bbc42587622888228039020-Scene-027.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_dataset/34b5607e97442faf91006f1f1e58a642-Scene-050.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_dataset/40ef23d361ad9f749cccbcf1e8d35c5f-Scene-002.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_dataset/599b1630b379d5635a14a9c7cb30ab36-Scene-007_subtitle_cropped.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_dataset/5e1d39b3e206ed74ee05ab4577e9221c-Scene-031.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_dataset/69ad997c47b5d87c4306a121f4b3946b-Scene-042_subtitle_cropped.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_dataset/6ae858fdf2249248db898fee4636c205-Scene-003.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_dataset/6f5f238770b5aa6a6e01d321d3d4c609-Scene-005_subtitle_cropped.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_dataset/704079b27a30d116333f0f63dcc70f77-Scene-047.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_dataset/7e18ce9cd7983ca20d85a1b54b29535a-Scene-043.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_dataset/95352557bd1104d80b9fdfedfceec7b0-Scene-003.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_dataset/968b7e6bb5e8a7863ae9546c58287fe6-Scene-013_subtitle_cropped.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_dataset/b60577d2a6e8d2f5274f5dbe75d1887d-Scene-026.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_dataset/c8319a64faecb4fddfbdef8de073d9dc-Scene-007.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_dataset/e2f5329b49cd9cae014a09aa233cd6a8-Scene-064.mp4"></video>
+</div>
+</div>
+<div class="section-header" id="ohbench-demo">
+<h2>🚀 OmniHuman Benchmark</h2>
+<p>We establish OHBench, a comprehensive benchmark aligned with human perception for human-centric  multimodal video generation, enabling comprehensive diagnosis of model performance in real-world scenarios. The following section details the performance scores of different cases (<strong>all videos are generated by different models</strong>) across some evaluation metrics in OHBench.</p>
+</div>
+<div class="ohbench">
+<div class="ohbench-row">
+<div class="ohbench-row-videos">
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_benchmark/BP/4a3d031a76ebc15e079048eedf6740cf-Scene-002.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_benchmark/BP/b94d2fd87f0f92c9dc90969037c1831f-Scene-098.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_benchmark/BP/c3b1c2a94e6c099246a99b04cfa9acd4-Scene-049.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_benchmark/BP/cf15bfd37f70e059957071a3c6099750-Scene-076.mp4"></video>
+</div>
+</div>
+<div class="ohbench-row-caption">🌄 The <strong>Background Plausibility (BP)</strong> metric ranges from 1 to 10, with higher values indicating superior quality. As illustrated from left to right, the respective scores from left to right are <strong>9, 1, 2, and 2.</strong></div>
+</div>
+<div class="ohbench-row">
+<div class="ohbench-row-videos">
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_benchmark/IC/0bd6ef084463ad7bbb4e9d3ceb003410-Scene-001.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_benchmark/IC/2eade74a5e449a9b1e148aa8fb0f9ea8-Scene-042.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_benchmark/IC/4569ccf18bf4c6384eb7a9152008ec93-Scene-022.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_benchmark/IC/4774f005c662b822bba1babfd360d71b-Scene-305_subtitle_cropped_cropped.mp4"></video>
+</div>
+</div>
+<div class="ohbench-row-caption">🆔 Regarding <strong>Identity Consistency (IC)</strong>, where both metrics range from 0 to 1, the scores for our metric and the VBench metric from left to right are: <strong>0.671 vs. 0.968, 0.513 vs. 0.970, 0.554 vs. 0.975, and 0.592 vs. 0.976</strong>, respectively. Notably, while these videos exhibit significantly different levels of identity fidelity to the naked eye, VBench's scores remain consistently high and nearly identical.</div>
+</div>
+<div class="ohbench-row">
+<div class="ohbench-row-videos">
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_benchmark/IC_double/4a3d031a76ebc15e079048eedf6740cf-Scene-002.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_benchmark/IC_double/59442a2442ee8c5d92e3129b60dee990-Scene-025.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_benchmark/IC_double/8001ded132e21b493035ed2c57586c29-Scene-012_subtitle_cropped.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_benchmark/IC_double/91b10475ccb6639a05a81a60ce0e2fbc-Scene-038_subtitle_cropped.mp4"></video>
+</div>
+</div>
+<div class="ohbench-row-caption">👥 For <strong>Dual-Person identity consistency (IC_double)</strong> ranges from 0 to 1, the scores from left to right are <strong>0.582, 0.892, 0.471, and 0.466</strong>, respectively.</div>
+</div>
+<div class="ohbench-row">
+<div class="ohbench-row-videos">
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_benchmark/IN/4dfbf128254d9e9b33b5b571379048bc-Scene-052_subtitle_cropped.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_benchmark/IN/bee9e8add9cfc07f02ecb13d7f4eb2ae-Scene-032.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_benchmark/IN/d9adf40156e4af0e4a14e28439cc5e41-Scene-034_subtitle_cropped.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_benchmark/IN/e1d948a86c1390efefe3550ab5d1026b-Scene-004_subtitle_cropped.mp4"></video>
+</div>
+</div>
+<div class="ohbench-row-caption">🤝 For <strong>interaction naturalness (IN)</strong> ranges from 1 to 10 (higher is better), the results from left to right are <strong>6, 2, 9, and 3</strong>, respectively.</div>
+</div>
+<div class="ohbench-row">
+<div class="ohbench-row-videos">
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_benchmark/LR/1b98daa995cb2c6e88089806ccaa1159-Scene-003.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_benchmark/LR/73732b7f8f6a83e3586cd91b8d422810-Scene-119.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_benchmark/LR/d16386c5659943c418943ceaffeca2b0-Scene-009.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_benchmark/LR/f1d047c6a9b2d56f9e764864a037b299-Scene-005.mp4"></video>
+</div>
+</div>
+<div class="ohbench-row-caption">🎧 For <strong>listener realism (LR)</strong> metric, which ranges from 1 to 10, the scores from left to right are <strong>1, 9, 1, and 1</strong>, respectively.</div>
+</div>
+<div class="ohbench-row">
+<div class="ohbench-row-videos">
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_benchmark/ES/2d0614ebab9b3995cd5d92721b549f66-Scene-009_subtitle_cropped.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_benchmark/ES/85e1fff8f75018cd326c4ee87d997066-Scene-029.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_benchmark/ES/972babaf689442a0994ae1fb5888696c-Scene-034.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_benchmark/ES/cb0800b8288385ce41983031a5cf2fca-Scene-058.mp4"></video>
+</div>
+</div>
+<div class="ohbench-row-caption">😊 For <strong>emotion similarity (ES)</strong> metric, which ranges from 1 to 10, the scores from left to right are <strong>2, 9, 3, and 5</strong>, respectively.</div>
+</div>
+<div class="ohbench-row">
+<div class="ohbench-row-videos">
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_benchmark/OC/01c7_mova.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_benchmark/OC/071710c6e7f1ce8a90e26bac93973b7d-Scene-055.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_benchmark/OC/0f8080c957463d7ae195c8c693b11a25-Scene-012.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_benchmark/OC/f8f2d1d0f62f9f5d4fdb1dbbcd7301b2-Scene-024.mp4"></video>
+</div>
+</div>
+<div class="ohbench-row-caption">📦 For <strong>object consistency (OC)</strong> metric, which ranges from 1 to 10, the scores from left to right are <strong>1, 2, 2, and 3</strong>, respectively.</div>
+</div>
+<div class="ohbench-row">
+<div class="ohbench-row-videos">
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_benchmark/AC/363ca4ae77497648e13d4933824291c8-Scene-032_cropped.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_benchmark/AC/5c1ca3fa70ab8e47c3d58b43ac841553-Scene-068.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_benchmark/AC/ba0da10666c2c0967b7598da8b6c1fe0-Scene-287.mp4"></video>
+</div>
+<div class="video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="omnihuman_benchmark/AC/c87172d0cb3574d392b5fd5c3a93cd42-Scene-027.mp4"></video>
+</div>
+</div>
+<div class="ohbench-row-caption">🏷️ For <strong>attribute consistency (AC)</strong> metric, which ranges from 1 to 10, the scores from left to right are <strong>2, 3, 1, and 1</strong>, respectively.</div>
+</div>
+</div>
+<div class="section-header" id="finetuning-demo">
+<h2>✨ Comparison of Results: Before vs. After FineTuning</h2>
+<p>We finetuned LTX-2, the current SOTA model, using 200k samples from the OmniHuman Dataset. Notably, there is zero ID overlap between our benchmark and the training dataset. Our results show comprehensive improvements across all metrics, particularly in audio quality and identity preservation.</p>
+</div>
+<div class="extra-section">
+<div class="extra-row">
+<div class="extra-row-videos">
+<div class="extra-video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="ltx_ft/identity/0_ltx_org.mp4"></video>
+</div>
+<div class="extra-video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="ltx_ft/identity/0_ltx_tune.mp4"></video>
+</div>
+<div class="extra-video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="ltx_ft/identity/1_ltx_org.mp4"></video>
+</div>
+<div class="extra-video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="ltx_ft/identity/1_ltx_tune.mp4"></video>
+</div>
+</div>
+<div class="extra-row-caption">🆔 Above are two sets of video comparisons before and after finetuning. In each pair, the first video shows the original LTX-2 output, and the second displays the results after finetuning. It is evident that <strong>identity fidelity</strong> has been significantly improved.</div>
+</div>
+<div class="extra-row">
+<div class="extra-row-videos">
+<div class="extra-video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="ltx_ft/audio_quality/1_ltx_org.mp4"></video>
+</div>
+<div class="extra-video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="ltx_ft/audio_quality/1_ltx_tune.mp4"></video>
+</div>
+<div class="extra-video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="ltx_ft/audio_quality/2_ltx_org.mp4"></video>
+</div>
+<div class="extra-video-card">
+<video autoplay="" loop="" muted="" playsinline="" src="ltx_ft/audio_quality/2_ltx_tune.mp4"></video>
+</div>
+</div>
+<div class="extra-row-caption">🎧The video pairs above demonstrate the results before and after finetuning. In each pair, the first video shows the original LTX-2 output, followed by our finetuned version. Please listen closely to the <strong>audio</strong>: you will notice that the finetuned results exhibit significantly higher quality, with reduced background noise and a substantial boost in the realism and naturalness of the human voice.</div>
+</div>
+</div>
+<script>
         // 默认静音自动播放；鼠标悬停/点击时打开该视频音频，离开时重新静音
         (function () {
             const videos = document.querySelectorAll("video");
@@ -361,5 +660,16 @@
             });
         })();
     </script>
-</body>
+<footer class="page-footer">
+<div>
+        OmniHuman · ECCV 2026 · Peking University × Tencent WeChat
+    </div>
+<div style="margin-top:6px;">
+<a href="https://arxiv.org/abs/2604.18326" rel="noopener" target="_blank">Paper</a>
+         · 
+        <a href="https://github.com/julia-cherry/OmniHuman" rel="noopener" target="_blank">Code</a>
+         · 
+        <a href="https://huggingface.co/datasets/julia527/omnihuman" rel="noopener" target="_blank">Dataset</a>
+</div>
+</footer></body>
 </html>
