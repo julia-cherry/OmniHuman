@@ -10,7 +10,7 @@
   <a href="https://arxiv.org/abs/2604.18326">
     <img src="https://img.shields.io/badge/📄_Paper-arXiv-B31B1B?style=for-the-badge" alt="Paper">
   </a>
-  <a href="https://huggingface.co/datasets/julia527/omnihuman">
+  <a href="https://huggingface.co/datasets/julia527/omnihuman_dataset">
     <img src="https://img.shields.io/badge/🤗_Dataset-Hugging_Face-FFD21E?style=for-the-badge" alt="Dataset">
   </a>
   <a href="https://huggingface.co/julia527/omnihuman_benchmark">
